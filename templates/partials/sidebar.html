@@ -19,7 +19,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'app:index' %}">
+      <a class="nav-link" href="{% url 'web:index' %}">
         <span class="menu-title">Dashboard</span>
         <i class="mdi mdi-home menu-icon"></i>
       </a>
@@ -32,31 +32,31 @@
       </a>
       <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{% url 'app:buttons' %}">Buttons</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{% url 'app:typography' %}">Typography</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'web:buttons' %}">Buttons</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'web:typography' %}">Typography</a></li>
         </ul>
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'app:icon' %}">
+      <a class="nav-link" href="{% url 'web:icon' %}">
         <span class="menu-title">Icons</span>
         <i class="mdi mdi-contacts menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'app:form' %}">
+      <a class="nav-link" href="{% url 'web:form' %}">
         <span class="menu-title">Forms</span>
         <i class="mdi mdi-format-list-bulleted menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'app:charts' %}">
+      <a class="nav-link" href="{% url 'web:charts' %}">
         <span class="menu-title">Charts</span>
         <i class="mdi mdi-chart-bar menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'app:tables' %}">
+      <a class="nav-link" href="{% url 'web:tables' %}">
         <span class="menu-title">Tables</span>
         <i class="mdi mdi-table-large menu-icon"></i>
       </a>
@@ -69,9 +69,9 @@
       </a>
       <div class="collapse" id="general-pages">
         <ul class="nav flex-column sub-menu">
-          {% comment %} <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}"> Login </a></li>  {% endcomment %}
+          <li class="nav-item"> <a class="nav-link" href="{% url 'auth_login' %}"> Login </a></li> 
           <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-          <li class="nav-item"> <a class="nav-link" href="{% url 'app:error' %}"> 404 </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{% url 'web:error' %}"> 404 </a></li>
         </ul>
       </div>
     </li>

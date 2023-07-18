@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, BookAuthor
+from .models import Book, BookAuthor , FavoriteBook
 from import_export.admin import ImportExportActionModelAdmin
 
 # Register your models here.
@@ -9,7 +9,6 @@ class BookInline(admin.TabularInline):
     extra = 0
     fields = ("title","slug", "year", "price", "is_special", "is_trending")
    
-
 
 @admin.register(BookAuthor)
 class BookAuthorAdmin(admin.ModelAdmin):
@@ -24,3 +23,8 @@ class BookAdmin(ImportExportActionModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
 
+
+@admin.register(FavoriteBook)
+class FavoriteBookAdmin(admin.ModelAdmin):
+    autocomplete_fields = ("user", "books")
+    
